@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    types:
+      - edited
+      - opened
+      - synchronize
+
+jobs:
+  Lint-Format-Test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root
+
+      - name: Run Security Audit
+        run: |
+          poetry run pip install safety
+          poetry run safety scan || echo "Security audit completed with warnings."
+        continue-on-error: false
+
+      - name: Run Lint
+        run: poetry run ruff check src tests
+        continue-on-error: false
+
+      - name: Run Format check
+        run: |
+          poetry run ruff format --check src tests
+          if ! git diff --exit-code; then
+            echo "Code formatting issues found. Please run 'poetry run ruff format' to fix them."
+            exit 1
+          fi
+        continue-on-error: false
+
+      - name: Run Tests
+        run: poetry run pytest --cov=src --cov-report=term-missing
+
+      - name: Check Coverage Threshold
+        run: |
+          poetry run pytest --cov=src --cov-fail-under=90
