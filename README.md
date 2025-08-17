@@ -9,24 +9,24 @@
 ![Ruff](https://img.shields.io/badge/Ruff-linting-FF6F61?logo=python&logoColor=white)
 ![Black](https://img.shields.io/badge/Black-formatting-000000?logo=python&logoColor=white)
 ![Pre-commit](https://img.shields.io/badge/Pre--commit-hooks-FAB040?logo=precommit&logoColor=white)
+![Commitlint](https://img.shields.io/badge/Commitlint-enforced-000000?logo=commitlint&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Pytest-testing-0A9EDC?logo=pytest&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative&logoColor=white)
 
-**Lumen** is a minimal yet powerful Python starter template for building **applications, libraries, and CLI tools**.  
+**Lumen** is a minimal yet powerful Python starter template for building **applications, libraries, and CLI tools**.
 It comes pre-configured with modern Python tooling to ensure clean code, consistent formatting, and reliable testing — so you can focus on building, not setup.
 
 ---
 
 ## ⚡ Features
 
-- **Python 3.12+**: Built on the latest stable Python.
+- **Python 3.13+**: Built on the latest stable Python.
 - **Pre-configured Tooling**:
   - **Poetry**: Dependency management and packaging.
   - **Ruff**: Lightning-fast linting.
   - **Black**: Opinionated code formatting.
   - **Pre-commit**: Hooks to enforce consistency before commits.
 - **Pytest**: Integrated unit testing for robust codebases.
-- **Environment Config**: Example `.env` included for local development.
 - **Developer Experience**: Clean, modular structure with minimal boilerplate.
 
 ---
@@ -60,13 +60,13 @@ Ensure you have the following installed:
 3. Run the project in development mode:
 
    ```bash
-   poetry run python -m lumen
+   poetry run app
    ```
 
 4. Run tests with:
 
    ```bash
-   poetry run pytest
+   poetry run test
    ```
 
 ---
@@ -82,4 +82,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) fi
 - Designed for developers building **Python applications and libraries**.
 - Inspired by the clarity of **Lumen**, this template provides a bright start for new projects.
 - Made with ❤️ to reduce setup overhead and keep the focus on development.
-
