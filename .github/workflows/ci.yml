@@ -32,7 +32,7 @@ jobs:
       - name: Run Security Audit
         run: |
           poetry run pip install safety
-          poetry run safety check || echo "Security audit completed with warnings."
+          poetry run safety scan || echo "Security audit completed with warnings."
         continue-on-error: false
 
       - name: Run Lint
