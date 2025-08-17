@@ -4,7 +4,7 @@
 
 # 💡 Lumen
 
-![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.13%2B-3776AB?logo=python&logoColor=white)
 ![Poetry](https://img.shields.io/badge/Poetry-configured-60A5FA?logo=poetry&logoColor=white)
 ![Ruff](https://img.shields.io/badge/Ruff-linting-FF6F61?logo=python&logoColor=white)
 ![Black](https://img.shields.io/badge/Black-formatting-000000?logo=python&logoColor=white)
@@ -37,7 +37,7 @@ It comes pre-configured with modern Python tooling to ensure clean code, consist
 
 Ensure you have the following installed:
 
-- **Python**: v3.12 or later.
+- **Python**: v3.13 or later.
 - **Poetry**: v1.8 or later.
 
 ---
