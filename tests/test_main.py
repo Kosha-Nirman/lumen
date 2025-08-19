@@ -8,5 +8,5 @@ def test_main(capsys: CaptureFixture[str]) -> None:
     main()
     captured = capsys.readouterr()
     # Using pytest's more explicit assertion
-    if "Hello, Python Template!" not in captured.out:
+    if "Welcome to Lumen!" not in captured.out:
         pytest.fail("Expected output not found in captured output")
